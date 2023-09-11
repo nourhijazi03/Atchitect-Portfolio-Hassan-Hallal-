@@ -1,0 +1,135 @@
+.home{
+    background-color: black;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+}
+.imgsmall{
+    display: none;
+}
+
+.introDiv{
+    width: 50%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+    color: white;
+    font-size: 40px;
+
+    animation-name: moveX;
+    animation-duration: 0.7s;
+}
+@keyframes moveX {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+
+    
+}
+
+.imagediv{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.zintro{
+    color: white;
+    width: 70%;
+    font-size: 19px;
+
+}
+
+.contactme{
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 22px;
+    background-color: white;
+    border-radius: 18px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transform: translateZ(0);
+}
+.contactme:before{
+    content: "";
+    position:absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gold;
+    transform: scaleX(0);
+    transition: 300ms ease-out;
+    border-radius: 18px;
+}
+.contactme:hover:before{
+    transform: scaleX(1);
+}
+
+
+
+
+
+
+@media screen and (max-width:800px) {
+    .home{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .introDiv{
+        font-size: 25px;
+        margin-left: 40px;
+        width: inherit;
+        justify-content: flex-start;
+        height: auto;
+        margin-top: 60px;
+    }
+    .imagediv{
+        width: 90%;
+        flex-direction: row;
+        border: solid 1px white;
+        height: auto;
+        justify-content: space-evenly;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .imagediv img{
+        width: 100px;
+        width: 100px;
+        display: none;
+    }
+    .zintro{
+        width: 100%;
+        padding: 5px;
+        
+    }
+    .contactme{
+        padding: 8px 15px;
+    }
+    .imgsmall{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .imgsmall img{
+        width: 100px;
+        height: 100px;
+        border: solid 3px white;
+        border-radius: 50%;
+        padding: 5px;
+        margin-top: 10px;
+    }
+    
+}
