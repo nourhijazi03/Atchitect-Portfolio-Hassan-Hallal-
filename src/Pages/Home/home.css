@@ -68,7 +68,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: gold;
+    background-color:#fd6e0a; 
     transform: scaleX(0);
     transition: 300ms ease-out;
     border-radius: 18px;

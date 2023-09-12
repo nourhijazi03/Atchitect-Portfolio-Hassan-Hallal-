@@ -1,0 +1,147 @@
+.skillsdiv{
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: black;
+}
+
+
+.skillsTitle h1{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.5;
+    color: #fd6e0a;
+    text-transform: capitalize;
+    text-align: center;
+    border-bottom: 2px dashed white;
+
+}
+.skillscontainer{
+    padding: 65px 0 100px 0px;
+    background-color: white;
+    position: relative;
+    background-color: black;
+    height: 100vh;
+}
+
+.skillsItems{
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap ;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.skillsItem{
+    -webkit-box-flex: 0;
+    -ms-flex:0 0 48%;
+    flex: 0 0 48%;
+    
+    
+}
+
+.skillsInfo{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; 
+    
+}
+
+.skillsInfo p{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 1;
+    -webkit-animation: showText 0.5s 1s linear forwards ;
+    animation: showText 0.5s 1s linear forwards ;
+    color: white;
+    letter-spacing: 0.8px;
+}
+.progressSkill{
+    margin-top: 7px;
+    height: 10px;
+    width: 100%;
+    background-color: white;
+    border-radius: 50px;
+    position: relative;
+
+}
+.progressSkill span{
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-animation: barAnimate 1s cubic-bezier(1,0,0.5,1) forwards;
+    animation: barAnimate 1s cubic-bezier(1,0,0.5,1) forwards;
+    height: 100%;
+    border-radius: 50px;
+    position: absolute;
+    background-color: #fd6e0a;
+    transition: 1s all;
+}
+.progressSkill span.barAnimate{
+    -webkit-animation: barAnimate 1.5s 0.5s cubic-bezier(1,0,0.5,1) forwards;
+    animation: barAnimate 1.5s 0.5s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@-webkit-keyframes showText{
+    100%{
+        opacity:1;
+    }
+}
+@keyframes showText{
+    100%{
+        opacity:1;
+    }
+}
+@-webkit-keyframes barAnimate{
+    100%{
+    -webkit-transform:scaleX(1);
+    transform:scaleX(1);
+    }
+}
+@keyframes barAnimate{
+    100%{
+    -webkit-transform:scaleX(1);
+    transform:scaleX(1);
+    }
+}
+@media screen and   (max-width:800px) {
+    .skillscontainer{
+        max-width: 100%;
+        margin: auto;
+    }
+    .skillsdiv{
+        width: 100%;
+        margin: auto;
+    }
+   .skillsItem{
+
+    flex: 0 90%;
+    margin: auto;
+   }
+}
+
+.skillsIcon{
+    border-left: #fd6e0a 2px solid;
+    border-right: #fd6e0a 2px solid;
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin: auto;
+    margin-top: 40px;
+    
+    
+}
+
