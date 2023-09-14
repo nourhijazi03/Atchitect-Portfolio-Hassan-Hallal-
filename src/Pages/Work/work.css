@@ -1,0 +1,106 @@
+.workContainer{
+    width: 95%;
+    min-height: 100vh;
+    position: relative;
+    margin: 0 auto;
+
+}
+.workContainer h1{
+    padding: 15px;
+    text-align: center;
+}
+
+.workGird{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 15px;
+    margin: 20px auto;
+
+}
+
+.workbox{
+    height: 220px;
+    width: 100%;
+    border: 5px solid black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.workbox img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s linear;
+}
+
+.workbox img:hover{
+    transform: scale(1.1);
+}
+
+.popupWorkBox{
+    position: fixed;
+    margin-top: 50px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+}
+
+.popupWorkBox img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    max-height: 95%;
+    max-width: 95%;
+    object-fit: contain;
+
+}
+
+.popupWorkBox span{
+    position: absolute;
+    top: 25px;
+    right: 140px;
+    z-index: 100;
+    cursor: pointer;
+    color: #3d3d3d;
+    user-select: none;
+    border: solid 3px white;
+    border-radius: 50%;
+    padding: 2px;
+    background-color:#c1c1c1;
+    
+}
+
+@media screen and (max-width:767px) 
+{
+    .workGird{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+    }
+    .workbox{
+        height: 120px;
+        width: 100%;
+    }
+    .popupWorkBox span{
+        top: 170px;
+        right: 20px;
+    }
+}
+@media screen and (max-width:500px) {
+    .popupWorkBox span{
+        top: 230px;
+        right: 20px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .popupWorkBox span{
+        top: 100px;
+        right: 30px;
+    }
+}

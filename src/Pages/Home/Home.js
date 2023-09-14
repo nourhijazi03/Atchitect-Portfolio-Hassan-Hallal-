@@ -7,11 +7,11 @@ function Home() {
   return (
     <div className='home'>
         <div className='imgsmall'>
-            <img src={mainimg}/>
+            <img src={mainimg} alt='logo'/>
         </div>
     <div className='introDiv'>
         <div className='titles'>
-            <h1>Hi,</h1>
+            <h1>Hello,</h1>
             <h1>I am Hassan Hallal</h1>
 
         </div>
@@ -26,10 +26,10 @@ function Home() {
                 ]
             }}/>
         </div>
-        <button className='contactme'>Contact Me</button>
+        <button className='contactme'><span>Contact Me</span></button>
     </div>
     <div className='imagediv'>
-        <img src={mainimg}></img>
+        <img src={mainimg} alt='logo'></img>
         <p className='zintro'>Interior Architect with a masters degree from institute of fine art Lebanese Univesiry
             with more than fifteen years in the field between Gulf-Lebanon and US.
         </p>

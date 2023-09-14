@@ -1,8 +1,9 @@
 .home{
-    background-color: black;
-    height: 90vh;
+    background:linear-gradient(to right,#3d3d3d,black,black);
+    min-height: 100vh;
     width: 100%;
-    display: flex;
+    display: flex;  
+    overflow-x: hidden;
 }
 .imgsmall{
     display: none;
@@ -15,7 +16,7 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 100px;
-    color: white;
+    color: #c1c1c1;
     font-size: 40px;
 
     animation-name: moveX;
@@ -40,9 +41,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 100px;
+
+}
+.imagediv img{
+    border-radius: 50%;
+    padding: 10px;
 }
 .zintro{
-    color: white;
+    color: #c1c1c1;
     width: 70%;
     font-size: 19px;
 
@@ -53,12 +60,14 @@
     height: 50px;
     margin-top: 10px;
     font-size: 22px;
-    background-color: white;
+    background-color: #AAAAAA;
     border-radius: 18px;
     border: none;
     position: relative;
     cursor: pointer;
     transform: translateZ(0);
+    transition: all 0.5s;
+    font-weight: 500;
 }
 .contactme:before{
     content: "";
@@ -68,15 +77,39 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color:#fd6e0a; 
+    background-color:whitesmoke; 
     transform: scaleX(0);
     transition: 300ms ease-out;
+
     border-radius: 18px;
 }
+.contactme span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.contactme span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .contactme:hover span {
+    padding-right: 25px;
+  }
+  .contactme:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 .contactme:hover:before{
     transform: scaleX(1);
 }
-
+.ztext{
+    color: white;
+}
 
 
 
@@ -86,6 +119,7 @@
     .home{
         flex-direction: column;
         height: 100vh;
+        width: 100%;
     }
     .introDiv{
         font-size: 25px;
@@ -102,7 +136,8 @@
         height: auto;
         justify-content: space-evenly;
         margin: auto;
-        margin-bottom: 10px;
+        margin-top: 40px;
+        
     }
     .imagediv img{
         width: 100px;
@@ -121,6 +156,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 60px;
 
     }
     .imgsmall img{
@@ -132,4 +168,13 @@
         margin-top: 10px;
     }
     
+}
+
+/*navbar*/
+.listItembtn:hover{
+    background-color:inherit !important;
+    transform: translate(0,-8px) !important;
+}
+.listItembtn:active{
+    background-color: inherit !important;
 }
