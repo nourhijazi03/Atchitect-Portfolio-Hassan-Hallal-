@@ -1,0 +1,90 @@
+.section360{
+    min-height: 100vh;
+    width: 100%;
+    background:linear-gradient(to right,#464646,#c1c1c1,#464646);
+    margin-top: 70px;
+    
+}
+.section360 h1{
+    text-align: center;
+    border-bottom: double #c1c1c1 3px;
+    letter-spacing: 4px;
+    color: #464646;
+}
+
+.container360{
+    margin: auto;
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    background-color: inherit;
+}
+.card360{
+    margin-top: 10px;
+    width: 200px;
+    height: 120px;
+    position: relative;
+    animation-name: moveX;
+    animation-duration: 0.7s;
+    box-shadow: 0px 2px 8px  white;
+    
+}
+.card360 img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    cursor: pointer;
+}
+
+.bdiv360{
+    height: 60vh;
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 8px white;
+}
+.sdiv360{
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+
+}
+.testtt{
+    border-radius: 12px;
+}
+
+@keyframes moveX {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+
+    
+}
+
+@media screen and (max-width:800px) {
+    .bdiv360{
+        width: 90%;
+    }
+    .card360{
+        width: 100px;
+        height: 70px;
+        ;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .bdiv360{
+        width: 90%;
+    }
+    .card360{
+        width: 70px;
+        height: 40px;
+        ;
+    }
+}

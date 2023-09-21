@@ -1,13 +1,16 @@
 .workContainer{
-    width: 95%;
+    width: 100%;
     min-height: 100vh;
     position: relative;
     margin: 0 auto;
+    background-color: #c1c1c1;
+    margin-top: 60px;
 
 }
 .workContainer h1{
     padding: 15px;
     text-align: center;
+    color: #3d3d3d;
 }
 
 .workGird{
@@ -15,16 +18,18 @@
     grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
     gap: 15px;
     margin: 20px auto;
+    width: 95%;
 
 }
 
 .workbox{
     height: 220px;
     width: 100%;
-    border: 5px solid black;
+    
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
     overflow: hidden;
     cursor: pointer;
+    border-radius: 8px;
 
 }
 .workbox img{
@@ -36,6 +41,7 @@
 
 .workbox img:hover{
     transform: scale(1.1);
+    /* transform: rotate(360deg); */
 }
 
 .popupWorkBox{

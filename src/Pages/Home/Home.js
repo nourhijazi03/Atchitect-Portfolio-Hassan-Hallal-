@@ -2,6 +2,7 @@ import React from 'react';
 import "./home.css";
 import TypeWriter from "typewriter-effect";
 import mainimg from "./Media/mainpic.jpg"
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
         <div className='titles'>
             <h1>Hello,</h1>
             <h1>I am Hassan Hallal</h1>
+            
 
         </div>
         <div className='ztext'>
@@ -26,7 +28,9 @@ function Home() {
                 ]
             }}/>
         </div>
+        <Link to="/contactme">
         <button className='contactme'><span>Contact Me</span></button>
+        </Link>
     </div>
     <div className='imagediv'>
         <img src={mainimg} alt='logo'></img>

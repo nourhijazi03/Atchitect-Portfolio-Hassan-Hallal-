@@ -1,0 +1,155 @@
+.contactContainer{
+    margin-top: 70px;
+    height: 90vh;
+    width: 100%;
+    background-color: #3d3d3d;
+    
+}
+.contacttitle{
+    text-align: center;
+    padding: 10px;
+    color: #c1c1c1;    
+}
+.maincontact{
+    width: 70%;
+    height: 70%;
+    background-color: #c1c1c1;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 18px;
+}
+
+.contactimg{
+    width: 50%;
+
+}
+.contactimg img{
+    width: 100%;
+    height: 100%;
+}
+.contactdiv{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.coloricon{
+  display: none;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+    height: auto;
+    padding: 30px;
+  }
+
+
+  
+  form input {
+    height: 40px;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #121619;
+    color: black;
+    margin-top: 10px;
+    background-color: inherit
+  }
+ 
+  form textarea {
+    margin-top: 15px;
+    height: 70px;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #121619;
+    color: black;
+    background-color: inherit;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    font-weight: bold;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  form input:focus,
+  textarea:focus {
+    outline: none;
+  }
+  
+  form label {
+    margin-top: 15px;
+    color: grey;
+  }
+  
+  form button {
+    margin-top: 40px;
+    width: 140px;
+    height: 40px;
+    border: none;
+    background-color: #121619;
+    color: whitesmoke;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .coloricon{
+    display: none !important;
+  }
+  @media screen and (max-width:767px) {
+    .contactContainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .maincontact{
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+    }
+    .contactdiv{
+      width: 100%;
+      height: auto;
+    }
+    .maincontact form{
+      width: 80%;
+    }
+    .videodiv{
+      display: none;
+    }
+    .contactimg{
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .coloricon{
+        display: initial !important;
+        font-size: 100px !important;
+        margin: auto !important;
+        color: #464646;
+        animation-name: rotating;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        
+    }
+    @keyframes rotating {
+      0%{
+        transform: rotate(90deg);
+      }
+      50%{
+        transform: rotate(180deg);
+      }
+      75%{
+        transform: rotate(360deg);
+      }
+      100%{
+        transform: rotate(0deg);
+      }
+      
+    }
+  } 
+
+
+  

@@ -1,0 +1,82 @@
+.expsection{
+    background-color: red;
+    height: 90vh;
+    width: 100%;
+    margin-top: 70px;
+    display: flex;
+    
+
+}
+.workexp{
+    width: 50%;
+    background-color: #7e7e7e;
+    border-right: solid 2px #3d3d3d;
+    
+
+}
+.edu{
+    width: 50%;
+    border-left: 2px solid #3d3d3d;
+}
+
+.workdivs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.workdiv{
+    background:linear-gradient(to right,#3d3d3d,#7e7e7e);
+    width: 70%;
+    height: 120px;
+    margin: 20px 0px ;   
+    color: #c1c1c1;
+    animation-name: moveX;
+    animation-duration: 0.7s;
+    border-top-left-radius: 30px;
+     
+}
+@keyframes moveX {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }    
+}
+
+.workdiv p{
+    margin: 7px 20px;
+}
+.worktitles{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px;
+}
+
+
+.edudiv{
+    background:linear-gradient(to right,#7e7e7e,#3d3d3d);
+    animation-name: moveXXX;
+    animation-duration: 0.7s;
+    border-top-right-radius: 30px;
+}
+
+@keyframes moveXXX {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }    
+}
+
+.tt{
+    text-align: center;
+    text-shadow: 2px 2px wheat;
+    color: #3d3d3d;
+}
