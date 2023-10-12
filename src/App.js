@@ -7,7 +7,9 @@ import Work from "./Pages/Work/Work";
 import Threesixty from "./Pages/Three60/Threesixty";
 import Contact from "./Pages/Contact/Contact";
 import Experience from "./Pages/Experience/Experience";
+import Footer from "./Components/Footer/Footer";
 import {BrowserRouter as Router , Route , Routes } from "react-router-dom";
+
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
       <Route path='/test' exact Component={TTest} />
       </Routes>
       </Router>
+      <Footer/>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 .home{
     /* background:linear-gradient(to right,#3d3d3d,black,black); */
-    background-color: #3d3d3d;
+    background:linear-gradient(45deg,#464646 33%,black 50%);
+    /* background-color: #3d3d3d; */
     min-height: 100vh;
     width: 100%;
     display: flex;  
@@ -9,7 +10,9 @@
 .imgsmall{
     display: none;
 }
-
+.titles h1{
+    text-wrap: wrap;
+}
 .introDiv{
     width: 50%;
     height: inherit;
@@ -42,18 +45,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 80px;
 
 }
 .imagediv img{
     border-radius: 50%;
-    border: solid 5px white;
+    /* border: solid 5px white; */
     border-bottom-right-radius: 30%;
     border-top-left-radius: 20%;
-    box-shadow: 0 0 5px white,
+    /* box-shadow: 0 0 5px white,
               0 0 25px #c1c1c1,
               0 0 50px white,
-              0 0 100px #c1c1c1;
+              0 0 100px #c1c1c1; */
 }
 .zintro{
     color: #c1c1c1;
@@ -116,6 +119,7 @@
 }
 .ztext{
     color: white;
+    wrap:wrap;
 }
 
 
@@ -125,8 +129,9 @@
 @media screen and (max-width:800px) {
     .home{
         flex-direction: column;
-        height: 100vh;
+        height: auto;
         width: 100%;
+        padding-bottom: 20px;
     }
     .introDiv{
         font-size: 25px;
@@ -135,6 +140,10 @@
         justify-content: flex-start;
         height: auto;
         margin-top: 60px;
+    }
+    .titles h1{
+        font-size: 30px;
+        text-wrap: wrap ;
     }
     .imagediv{
         width: 90%;
@@ -178,6 +187,11 @@
         margin-top: 10px;
     }
     
+}
+@media screen and (max-width:300px) {
+    .titles h1{
+        font-size: 25px;
+    }
 }
 
 /*navbar*/
