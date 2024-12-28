@@ -11,7 +11,7 @@ function Work() {
         <div className='workGird'>
             {Media.map((file,index)=>(
                 <div className='workbox' key={index} onClick={()=>setFile(file)}>
-                    <img src={file.url}/>
+                    <img src={file.url} alt="work"/>
                 </div>
 
             )
@@ -20,7 +20,7 @@ function Work() {
 
         <div className='popupWorkBox' style={{display: file?'block':"none"}}>
             <span onClick={()=>setFile(null)}><CloseIcon style={{height:"20px",width:"20px"}}/></span>
-            <img src={file?.url}/>
+            <img src={file?.url} alt='work'/>
 
         </div>
     </div>

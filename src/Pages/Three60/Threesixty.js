@@ -18,16 +18,16 @@ function Threesixty() {
       <h1>Take a tour</h1>
       <div className="container360">
         <div className="card360">
-          <img src={img1} onClick={() => setImg360("img1")} />
+          <img src={img1} onClick={() => setImg360("img1")} alt="360" />
         </div>
         <div className="card360">
-          <img src={img2} onClick={()=> setImg360("img2")} />
+          <img src={img2} onClick={()=> setImg360("img2")} alt="360" />
         </div>
         <div className="card360">
-          <img src={img3} onClick={() => setImg360("img3")} />
+          <img src={img3} onClick={() => setImg360("img3")} alt="360" />
         </div>
         <div className="card360">
-          <img src={img4} onClick={() => setImg360("img4")} />
+          <img src={img4} onClick={() => setImg360("img4")} alt="360" />
         </div>
       </div>
 

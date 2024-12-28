@@ -1,7 +1,7 @@
 .section360{
     min-height: 100vh;
     width: 100%;
-    background:linear-gradient(to right,#464646,#c1c1c1,#464646);
+    background-color: #c1c1c1;
     margin-top: 70px;
     
 }

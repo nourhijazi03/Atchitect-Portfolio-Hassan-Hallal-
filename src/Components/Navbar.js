@@ -33,7 +33,7 @@ function Navbar(props) {
     >
       <Typography variant="h6" sx={{ my: 2 }}>
         <Link to="/">
-          <img
+          <img  
             src={logo}
             style={{ width: "150px", height: "50px", cursor: "pointer" }}
             alt="HD LOGO"

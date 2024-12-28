@@ -1,45 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import "./home.css";
 import TypeWriter from "typewriter-effect";
-import mainimg from "./Media/mainpic.jpg"
-import { Link } from 'react-router-dom';
+import imgSlide from "./slidedata";
+
+import { Link } from "react-router-dom";
 
 function Home() {
-  return (
-    <div className='home'>
-        <div className='imgsmall'>
-            <img src={mainimg} alt='logo'/>
-        </div>
-    <div className='introDiv'>
-        <div className='titles'>
-            <h1>Hello,</h1>
-            <h1>I am Hassan Hallal</h1>
-            
+  const [imgIndex, setImgIndex] = useState(0);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (imgIndex === 3) {
+        setImgIndex(0);
+      } else {
+        setImgIndex(imgIndex + 1);
+      }
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [imgIndex]);
 
+  const bgStyle = {
+    backgroundImage: `url(${imgSlide[imgIndex].url})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    height: "100%",
+  };
+  return (
+    <div className="home">
+      <div className="slide" style={bgStyle}>
+        <div className="caption">
+          <h2 className="firm-name">HD-Design</h2>
+          <Link to="/contactme">
+            <button className="contact">Contact us</button>
+          </Link>
         </div>
-        <div className='ztext'>
-            <TypeWriter options={{
-                autoStart:true,
-                loop:true,
-                delay:40,
-                strings:[
-                    "I am an Interior Architect.",
-                    "I am a Photographer."
-                ]
-            }}/>
-        </div>
-        <Link to="/contactme">
-        <button className='contactme'><span>Contact Me</span></button>
-        </Link>
+      </div>
     </div>
-    <div className='imagediv'>
-        <img src={mainimg} alt='logo'></img>
-        <p className='zintro'>Interior Architect with a masters degree from institute of fine art Lebanese Univesiry
-            with more than fifteen years in the field between Gulf-Lebanon and US.
-        </p>
-    </div>
-    </div>
-  )
-  
+  );
 }
-export default Home
+export default Home;
