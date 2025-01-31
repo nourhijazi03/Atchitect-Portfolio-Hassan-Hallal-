@@ -12,7 +12,7 @@
   color: white;
 }
 .slide h1 {
-  font-size: 80px;
+  font-size: 70px;
   text-shadow: 8px 8px #2d3436;
 }
 .slide p {
@@ -86,12 +86,30 @@
 
 @media only screen and (max-width: 600px) {
   .slide h1 {
-    font-size: 30px;
-    text-shadow: 4px 4px #2d3436;
+    font-size: 18px;
+    text-shadow: 2px 2px #2d3436;
     text-align: center;
   }
   .slide p {
-    font-size: 14px;
+    font-size: 12px;
     text-shadow: 2px 2px #2d3436;
+  }
+  .services {
+    height: 90vh;
+  }
+  .row1 {
+    height: 70vh;
+    flex-direction: column;
+  }
+  .col1 {
+    text-align: center;
+    width: 70%;
+    height: 30%;
+  }
+  .col1 h1 {
+    font-size: 18px;
+  }
+  .col1 p {
+    font-size: 10px;
   }
 }

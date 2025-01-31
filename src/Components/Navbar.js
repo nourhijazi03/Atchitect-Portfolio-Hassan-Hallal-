@@ -38,7 +38,7 @@ function Navbar(props) {
             style={{ width: "150px", height: "50px", cursor: "pointer" }}
             alt="HD LOGO"
           ></img> */}
-          <h1 style={{ color: "#2d3436" }}>HD Design</h1>
+          <h1 style={{ color: "#2d3436", fontSize: "13px" }}>HD Design</h1>
         </Link>
       </Typography>
       <Divider />

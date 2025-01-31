@@ -36,7 +36,7 @@ function Home() {
       </div>
 
       <div className="services">
-        <h1 className="t">our services</h1>
+        <h1 className="t">OUR SERVICES</h1>
         <div className="row1">
           <div className="col1">
             <h1>Residential Design</h1>
