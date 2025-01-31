@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./home.css";
-import TypeWriter from "typewriter-effect";
 import imgSlide from "./slidedata";
 
 import { Link } from "react-router-dom";
@@ -25,16 +24,35 @@ function Home() {
     height: "100%",
   };
   return (
-    <div className="home">
-      <div className="slide" style={bgStyle}>
-        <div className="caption">
-          <h2 className="firm-name">HD-Design</h2>
+    <>
+      <div className="home">
+        <div className="slide" style={bgStyle}>
+          <h1>Transform Your Space with HD Design</h1>
+          <p>Premium interior design solutions for modern living</p>
           <Link to="/contactme">
             <button className="contact">Contact us</button>
           </Link>
         </div>
       </div>
-    </div>
+
+      <div className="services">
+        <h1 className="t">our services</h1>
+        <div className="row1">
+          <div className="col1">
+            <h1>Residential Design</h1>
+            <p>Custom home interiors tailored to your lifestyle</p>
+          </div>
+          <div className="col1">
+            <h1>Comertial Design</h1>
+            <p>Professional workspace solutions</p>
+          </div>
+          <div className="col1">
+            <h1>Renovation</h1>
+            <p>Complete home transformation services</p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 export default Home;

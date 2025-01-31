@@ -12,12 +12,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import logo from "./ComponentsMedia/logoHSN.jpg";
+
 import { Link } from "react-router-dom";
 
 function Navbar(props) {
   const drawerWidth = 240;
-  const navItems = ["My Work", "Experience", "Skills","360"];
+  const navItems = ["My Work", "Experience", "Skills", "360"];
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -32,12 +32,13 @@ function Navbar(props) {
       style={{ backgroundColor: "rgb(247,247,247)" }}
     >
       <Typography variant="h6" sx={{ my: 2 }}>
-        <Link to="/">
-          <img  
+        <Link to="/" style={{ textDecoration: "none" }}>
+          {/* <img
             src={logo}
             style={{ width: "150px", height: "50px", cursor: "pointer" }}
             alt="HD LOGO"
-          ></img>
+          ></img> */}
+          <h1 style={{ color: "#2d3436" }}>HD Design</h1>
         </Link>
       </Typography>
       <Divider />
@@ -50,15 +51,15 @@ function Navbar(props) {
                   ? "/myWork"
                   : item === "Skills"
                   ? "/skills"
-                  : item==="360"
+                  : item === "360"
                   ? "/360"
-                  : item==="Experience"
+                  : item === "Experience"
                   ? "/experience"
                   : "/test"
               }
-              style={{textDecoration:"none" ,color:"#464646"}}
+              style={{ textDecoration: "none", color: "#464646" }}
             >
-              <ListItemButton sx={{ textAlign: "center" }} >
+              <ListItemButton sx={{ textAlign: "center" }}>
                 <ListItemText primary={item} />
               </ListItemButton>
             </Link>
@@ -72,7 +73,7 @@ function Navbar(props) {
     window !== undefined ? () => window().document.body : undefined;
   return (
     <div className="navbar">
-      <AppBar component="nav" style={{ backgroundColor: "rgb(247,247,247)" }}>
+      <AppBar component="nav" style={{ backgroundColor: "#2d3436" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -81,15 +82,17 @@ function Navbar(props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: "none" } }}
           >
-            <MenuIcon style={{ color: "#3D3D3D" }} />
+            {" "}
+            <MenuIcon style={{ color: "white" }} />
+            <h1>HD Design</h1>
           </IconButton>
           <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <Link to="/">
-              <img
+            <Link to="/" style={{ textDecoration: "none" }}>
+              {/* <img
                 src={logo}
                 style={{
                   width: "150px",
@@ -98,7 +101,14 @@ function Navbar(props) {
                   marginTop: "10px",
                 }}
                 alt="HD LOGO"
-              ></img>
+              ></img> */}
+              <h1
+                style={{
+                  color: "white",
+                }}
+              >
+                HD Design
+              </h1>
             </Link>
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
@@ -109,16 +119,16 @@ function Navbar(props) {
                     ? "/myWork"
                     : item === "Skills"
                     ? "/skills"
-                    : item==="360"
+                    : item === "360"
                     ? "/360"
-                    : item==="Experience"
+                    : item === "Experience"
                     ? "/experience"
                     : "/test"
                 }
               >
                 <Button
                   key={item}
-                  sx={{ color: "#3d3d3d" }}
+                  sx={{ color: "white" }}
                   className="listItembtn"
                 >
                   {item}
